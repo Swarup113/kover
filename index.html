@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kover — Academic Cover Page Maker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════ LANDING PAGE ═══════════════════ -->
+  <div id="page-landing" class="page active">
+
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="https://i.postimg.cc/MHh6B8Dr/kover-logo.png" alt="Kover Logo" class="nav-logo-img" />
+        <span class="nav-logo-text">Kover</span>
+      </div>
+      <button class="btn-nav-cta" onclick="showPage('page-form')">Create Cover</button>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge">✦ Academic Cover Page Generator</div>
+        <h1 class="hero-title">
+          Make Your<br />
+          <span class="hero-title-accent">First Impression</span><br />
+          Count.
+        </h1>
+        <p class="hero-subtitle">
+          Generate professional, polished academic cover pages in seconds.<br />Export as a Word document — ready to submit.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="showPage('page-form')">
+            <span>Start Creating</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <a class="btn-ghost" href="#features">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Realistic Cover Page Preview Card -->
+      <div class="hero-preview-wrap">
+        <div class="hero-preview-card">
+          <div class="preview-shine"></div>
+          <div class="rp-cover">
+            <div class="rp-top-bar"></div>
+            <div class="rp-logo-area">
+              <div class="rp-logo-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d47a1" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+            </div>
+            <p class="rp-uni">University of Dhaka</p>
+            <p class="rp-faculty">Faculty of Science &amp; Engineering</p>
+            <p class="rp-dept">Department of Computer Science &amp; Engineering</p>
+            <div class="rp-hr thick"></div>
+            <div class="rp-hr thin"></div>
+            <p class="rp-type">Assignment</p>
+            <p class="rp-title">Impact of AI on Modern Healthcare Systems</p>
+            <div class="rp-hr mid"></div>
+            <div class="rp-grid">
+              <div class="rp-col">
+                <div class="rp-f"><span class="rp-l">Course Name</span><span class="rp-v">Machine Learning</span></div>
+                <div class="rp-f"><span class="rp-l">Course Code</span><span class="rp-v">CSE-4501</span></div>
+                <div class="rp-f"><span class="rp-l">Submitted By</span><span class="rp-v">John Doe</span></div>
+                <div class="rp-f"><span class="rp-l">Student ID</span><span class="rp-v">2021-3-60-012</span></div>
+              </div>
+              <div class="rp-col">
+                <div class="rp-f"><span class="rp-l">Semester</span><span class="rp-v">Spring 2025</span></div>
+                <div class="rp-f"><span class="rp-l">Section</span><span class="rp-v">A</span></div>
+                <div class="rp-f"><span class="rp-l">Submitted To</span><span class="rp-v">Dr. Farhan Ahmed</span></div>
+                <div class="rp-f"><span class="rp-l">Date</span><span class="rp-v">25 March 2025</span></div>
+              </div>
+            </div>
+            <div class="rp-bottom-bar"></div>
+          </div>
+        </div>
+        <div class="preview-orbit orbit-1"></div>
+        <div class="preview-orbit orbit-2"></div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+      <div class="features-inner">
+        <div class="section-eyebrow">Why Kover?</div>
+        <h2 class="section-title">Everything you need,<br />nothing you don't.</h2>
+        <div class="features-grid">
+          <div class="feature-card" data-reveal>
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h6M7 16h8"/></svg>
+            </div>
+            <h3 class="feature-title">Formal &amp; Professional</h3>
+            <p class="feature-desc">Every cover page follows academic formatting standards — clean, structured, and submission-ready with proper hierarchy and typography.</p>
+            <div class="feature-tag">Academic Standard</div>
+          </div>
+          <div class="feature-card featured" data-reveal>
+            <div class="feature-badge-top">Export</div>
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="feature-title">Word Export</h3>
+            <p class="feature-desc">Download as a fully editable <strong>Word (.doc)</strong> file — styled, formatted, and ready to submit or adjust as needed.</p>
+            <div class="feature-tag">Word Document</div>
+          </div>
+          <div class="feature-card" data-reveal>
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="feature-title">Instant Preview</h3>
+            <p class="feature-desc">See your cover page rendered live before downloading. No guessing — what you see is exactly what you get.</p>
+            <div class="feature-tag">Real-time</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="https://i.postimg.cc/MHh6B8Dr/kover-logo.png" alt="Kover" class="footer-logo-img" />
+          <span>Kover</span>
+        </div>
+        <p class="footer-copy">Made with care by <a href="https://github.com/Swarup113" target="_blank" rel="noopener" class="footer-author">Swarup Dewanjee</a></p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- ═══════════════════ FORM PAGE ═══════════════════ -->
+  <div id="page-form" class="page">
+
+    <nav class="navbar form-nav">
+      <button class="btn-back" onclick="showPage('page-landing')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span>Back</span>
+      </button>
+      <div class="nav-logo">
+        <img src="https://i.postimg.cc/MHh6B8Dr/kover-logo.png" alt="Kover Logo" class="nav-logo-img" />
+        <span class="nav-logo-text">Kover</span>
+      </div>
+      <div class="nav-spacer"></div>
+    </nav>
+
+    <div class="form-page-body">
+      <div class="form-header">
+        <h2 class="form-page-title">Build Your Cover Page</h2>
+        <p class="form-page-subtitle">Fill in the details below. Fields marked <span class="req-star">*</span> are required.</p>
+      </div>
+
+      <form id="coverForm" class="cover-form" novalidate>
+
+        <!-- 01: Logo -->
+        <div class="form-section" data-reveal>
+          <div class="section-header">
+            <div class="section-num">01</div>
+            <div><h3 class="section-title-sm">University Logo</h3><p class="section-hint">Upload your institution's logo — shown at the top of the cover page</p></div>
+          </div>
+          <div class="upload-zone" id="uploadZone" onclick="document.getElementById('logoInput').click()">
+            <input type="file" id="logoInput" accept="image/png,image/jpeg,image/jpg" hidden />
+            <div class="upload-placeholder" id="uploadPlaceholder">
+              <div class="upload-icon">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              </div>
+              <p class="upload-text">Click or drag &amp; drop your logo here</p>
+              <p class="upload-hint-text">PNG, JPG — max 5MB &nbsp;·&nbsp; <span class="req-star">*</span> Required</p>
+            </div>
+            <img id="logoPreview" class="logo-preview-img" src="" alt="Logo preview" style="display:none" />
+          </div>
+          <span class="err-msg" id="logoErr" style="display:none">University logo is required</span>
+          <button type="button" class="btn-remove-logo" id="removeLogo" style="display:none" onclick="removeLogo()">✕ Remove Logo</button>
+        </div>
+
+        <!-- 02: Institution -->
+        <div class="form-section" data-reveal>
+          <div class="section-header">
+            <div class="section-num">02</div>
+            <div><h3 class="section-title-sm">Institution Information</h3><p class="section-hint">Your university and department details</p></div>
+          </div>
+          <div class="input-grid two-col">
+            <div class="input-group full-span">
+              <label for="uniName">University / Institution Name <span class="req-star">*</span></label>
+              <input type="text" id="uniName" placeholder="e.g. University of Dhaka" required />
+              <span class="err-msg">University name is required</span>
+            </div>
+            <div class="input-group">
+              <label for="facultyName">Faculty / School</label>
+              <input type="text" id="facultyName" placeholder="e.g. Faculty of Engineering" />
+              <span class="optional-tag">Optional</span>
+            </div>
+            <div class="input-group">
+              <label for="deptName">Department <span class="req-star">*</span></label>
+              <input type="text" id="deptName" placeholder="e.g. Department of CSE" required />
+              <span class="err-msg">Department is required</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03: Document -->
+        <div class="form-section" data-reveal>
+          <div class="section-header">
+            <div class="section-num">03</div>
+            <div><h3 class="section-title-sm">Document Information</h3><p class="section-hint">Type of academic document and its title</p></div>
+          </div>
+          <div class="input-grid two-col">
+            <div class="input-group">
+              <label for="docType">Document Type <span class="req-star">*</span></label>
+              <div class="select-wrap">
+                <select id="docType" required>
+                  <option value="" disabled selected>Select type...</option>
+                  <option>Assignment</option><option>Lab Report</option><option>Term Paper</option>
+                  <option>Research Proposal</option><option>Thesis</option><option>Dissertation</option>
+                  <option>Project Report</option><option>Case Study</option><option>Literature Review</option>
+                  <option value="Other">Other</option>
+                </select>
+                <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+              </div>
+              <span class="err-msg">Please select a document type</span>
+            </div>
+            <div class="input-group" id="customDocTypeWrap" style="display:none">
+              <label for="customDocType">Custom Type <span class="req-star">*</span></label>
+              <input type="text" id="customDocType" placeholder="e.g. Seminar Paper" />
+              <span class="err-msg">Custom type is required</span>
+            </div>
+            <div class="input-group full-span">
+              <label for="docTitle">Document Title / Topic <span class="req-star">*</span></label>
+              <input type="text" id="docTitle" placeholder="e.g. Impact of AI on Modern Healthcare" required />
+              <span class="err-msg">Document title is required</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04: Course -->
+        <div class="form-section" data-reveal>
+          <div class="section-header">
+            <div class="section-num">04</div>
+            <div><h3 class="section-title-sm">Course Information</h3><p class="section-hint">Details about the course this document is for</p></div>
+          </div>
+          <div class="input-grid two-col">
+            <div class="input-group">
+              <label for="courseName">Course Name <span class="req-star">*</span></label>
+              <input type="text" id="courseName" placeholder="e.g. Machine Learning" required />
+              <span class="err-msg">Course name is required</span>
+            </div>
+            <div class="input-group">
+              <label for="courseCode">Course Code <span class="req-star">*</span></label>
+              <input type="text" id="courseCode" placeholder="e.g. CSE-4501" required />
+              <span class="err-msg">Course code is required</span>
+            </div>
+            <div class="input-group">
+              <label for="courseSection">Section</label>
+              <input type="text" id="courseSection" placeholder="e.g. A" />
+              <span class="optional-tag">Optional</span>
+            </div>
+            <div class="input-group">
+              <label for="semester">Semester / Term</label>
+              <input type="text" id="semester" placeholder="e.g. Spring 2025" />
+              <span class="optional-tag">Optional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05: Students — grouped 2-column layout -->
+        <div class="form-section" data-reveal>
+          <div class="section-header">
+            <div class="section-num">05</div>
+            <div><h3 class="section-title-sm">Student Information</h3><p class="section-hint">Up to 2 students shown side-by-side on the cover page</p></div>
+          </div>
+          <div id="studentsList" class="students-group">
+            <!-- Student 1 -->
+            <div class="student-card" data-index="0">
+              <div class="student-card-header">
+                <span class="student-label">Student 1</span>
+              </div>
+              <div class="input-group">
+                <label>Full Name <span class="req-star">*</span></label>
+                <input type="text" class="s-name" placeholder="e.g. Rakib Hossain" />
+                <span class="err-msg">Name is required</span>
+              </div>
+              <div class="input-group">
+                <label>Student ID <span class="req-star">*</span></label>
+                <input type="text" class="s-id" placeholder="e.g. 2020-3-60-012" />
+                <span class="err-msg">ID is required</span>
+              </div>
+              <div class="input-group">
+                <label>Email Address <span class="req-star">*</span></label>
+                <input type="email" class="s-email" placeholder="e.g. rakib@student.edu" />
+                <span class="err-msg">Email is required</span>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn-add-student" id="addStudentBtn" onclick="addStudent()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+            Add Second Student
+          </button>
+        </div>
+
+        <!-- 06: Submission -->
+        <div class="form-section" data-reveal>
+          <div class="section-header">
+            <div class="section-num">06</div>
+            <div><h3 class="section-title-sm">Submission Details</h3><p class="section-hint">Date and instructor information</p></div>
+          </div>
+          <div class="input-grid two-col">
+            <div class="input-group">
+              <label for="submissionDate">Submission Date <span class="req-star">*</span></label>
+              <div class="date-input-wrap">
+                <input type="date" id="submissionDate" required />
+                <svg class="date-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <span class="err-msg">Submission date is required</span>
+            </div>
+            <div class="input-group">
+              <label for="instructorName">Instructor / Supervisor Name <span class="req-star">*</span></label>
+              <input type="text" id="instructorName" placeholder="e.g. Dr. Farhan Ahmed" required />
+              <span class="err-msg">Instructor name is required</span>
+            </div>
+            <div class="input-group">
+              <label for="instructorTitle">Instructor Designation <span class="req-star">*</span></label>
+              <input type="text" id="instructorTitle" placeholder="e.g. Associate Professor" required />
+              <span class="err-msg">Designation is required</span>
+            </div>
+            <div class="input-group">
+              <label for="instructorDept">Instructor's Department <span class="req-star">*</span></label>
+              <input type="text" id="instructorDept" placeholder="e.g. Department of CSE" required />
+              <span class="err-msg">Instructor's department is required</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-generate-bar">
+          <button type="submit" class="btn-generate" id="generateBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <span>Generate Cover Page</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <footer class="footer form-footer">
+      <div class="footer-inner">
+        <p class="footer-copy">Made with care by <a href="https://github.com/Swarup113" target="_blank" rel="noopener" class="footer-author">Swarup Dewanjee</a></p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- ═══════════════════ PREVIEW MODAL ═══════════════════ -->
+  <div id="previewModal" class="modal-overlay" onclick="handleModalClick(event)">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          Cover Page Preview
+        </h3>
+        <div class="modal-actions">
+          <button class="btn-download word" onclick="downloadWord()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Word
+          </button>
+          <button class="btn-close-modal" onclick="closeModal()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="cover-page-wrapper">
+          <div id="coverPageOutput" class="cover-page-output">
+            <!-- Built by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
