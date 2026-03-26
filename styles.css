@@ -363,24 +363,117 @@ select option { background:#1a1e28;color:var(--text-primary); }
 [data-reveal] { opacity:0;transform:translateY(22px);transition:opacity .48s ease,transform .48s ease; }
 [data-reveal].revealed { opacity:1;transform:none; }
 
-/* ── RESPONSIVE ── */
-@media (max-width:900px) {
-  .hero { grid-template-columns:1fr;text-align:center;padding-top:110px; }
-  .hero-subtitle { margin:1.4rem auto 0; }
-  .hero-actions { justify-content:center; }
-  .hero-preview-wrap { display:none; }
-  .features-grid { grid-template-columns:1fr;max-width:480px;margin:0 auto; }
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+
+/* ── Tablet / small laptop ── */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 100px 2rem 60px;
+    min-height: auto;
+  }
+  .hero-subtitle { margin: 1.2rem auto 0; max-width: 520px; }
+  .hero-actions   { justify-content: center; }
+  .hero-preview-wrap { display: none; }
+  .features-grid  { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
 }
-@media (max-width:640px) {
-  .navbar { padding:0 1.2rem; }
-  .two-col { grid-template-columns:1fr; }
-  .full-span { grid-column:auto; }
-  .students-group.two-students { grid-template-columns:1fr; }
-  .modal-header { flex-direction:column;align-items:flex-start; }
-  .modal-actions { width:100%;justify-content:flex-end; }
-  .cp-two-col,.cp-students-grid { grid-template-columns:1fr; }
-  .form-page-body { padding-top:86px; }
-  .nav-spacer { display:none; }
-  .btn-generate { padding:15px 28px;font-size:.94rem; }
-  .cp-inner { padding:1.5rem 1.6rem 1.4rem; }
+
+/* ── Mobile large (≤ 640px) ── */
+@media (max-width: 640px) {
+
+  /* Navbar */
+  .navbar { padding: 0 1.1rem; height: 58px; }
+  .nav-logo-img  { width: 36px; height: 36px; }
+  .nav-logo-text { font-size: 1.08rem; }
+  .btn-nav-cta   { padding: 7px 16px; font-size: .82rem; }
+  .nav-spacer    { display: none; }
+
+  /* Hero */
+  .hero {
+    padding: 86px 1.2rem 50px;
+    gap: 1.6rem;
+  }
+  .hero-badge    { font-size: .7rem; padding: 5px 12px; margin-bottom: 1.2rem; }
+  .hero-title    { font-size: 2rem; letter-spacing: -.025em; line-height: 1.1; }
+  .hero-title-accent { font-size: inherit; }
+  .hero-subtitle { font-size: .88rem; line-height: 1.65; margin-top: 1rem; }
+  .hero-actions  { gap: .75rem; margin-top: 1.6rem; flex-direction: column; align-items: center; }
+
+  .btn-primary      { padding: 11px 24px; font-size: .88rem; width: 100%; max-width: 280px; justify-content: center; }
+  .btn-primary.large{ padding: 13px 28px; font-size: .92rem; }
+  .btn-ghost        { padding: 11px 20px; font-size: .88rem; width: 100%; max-width: 280px; justify-content: center; }
+
+  /* Features section */
+  .features { padding: 60px 1.2rem; }
+  .section-title  { font-size: 1.6rem; margin-bottom: 2rem; }
+  .feature-card   { padding: 1.6rem; }
+  .feature-title  { font-size: 1rem; }
+  .feature-desc   { font-size: .84rem; }
+
+  /* Footer */
+  .footer { padding: 1.4rem 1.2rem; }
+  .footer-inner   { flex-direction: column; align-items: center; text-align: center; gap: .6rem; }
+  .footer-logo    { font-size: .92rem; }
+  .footer-logo-img{ width: 28px; height: 28px; }
+  .footer-copy    { font-size: .8rem; }
+
+  /* Form page */
+  .form-page-body { padding: 82px 1rem 50px; }
+  .form-page-title{ font-size: 1.7rem; }
+  .form-page-subtitle { font-size: .86rem; }
+  .form-section   { padding: 1.4rem 1.1rem; margin-bottom: 1rem; }
+  .section-num    { min-width: 32px; height: 32px; font-size: .7rem; border-radius: 8px; }
+  .section-title-sm { font-size: .94rem; }
+
+  /* Form inputs: always single column on mobile */
+  .two-col         { grid-template-columns: 1fr; }
+  .full-span       { grid-column: auto; }
+  .input-group input,
+  .input-group select,
+  .input-group textarea { font-size: .88rem; padding: 10px 12px; }
+
+  /* Students */
+  .students-group.two-students { grid-template-columns: 1fr; }
+  .student-card   { padding: 1.1rem; }
+
+  /* Generate button */
+  .btn-generate   { padding: 14px 28px; font-size: .92rem; width: 100%; }
+
+  /* Modal */
+  .modal-overlay  { padding: .8rem; }
+  .modal-container{ border-radius: var(--radius-lg); }
+  .modal-header   { flex-direction: column; align-items: flex-start; padding: 1rem 1.1rem; gap: .7rem; }
+  .modal-title    { font-size: .9rem; }
+  .modal-actions  { width: 100%; justify-content: space-between; }
+  .btn-download   { padding: 8px 14px; font-size: .8rem; flex: 1; justify-content: center; }
+  .btn-close-modal{ width: 32px; height: 32px; flex-shrink: 0; }
+  .modal-body     { padding: 1rem; }
+
+  /* Cover page preview in modal */
+  .cp-inner       { padding: 1.3rem 1.2rem 1rem; }
+  .cp-uni-name    { font-size: .78rem; }
+  .cp-dept-name   { font-size: .68rem; }
+  .cp-faculty-name{ font-size: .65rem; }
+  .cp-doc-title   { font-size: .88rem; }
+  .cp-two-col,
+  .cp-students-grid { grid-template-columns: 1fr; }
+
+  /* Back button */
+  .btn-back       { padding: 7px 13px; font-size: .82rem; }
+  .btn-back span  { display: none; }   /* hide "Back" text, keep arrow only */
+}
+
+/* ── Mobile small (≤ 400px) ── */
+@media (max-width: 400px) {
+  .hero-title  { font-size: 1.75rem; }
+  .hero-subtitle { font-size: .82rem; }
+  .btn-primary,
+  .btn-ghost   { max-width: 100%; }
+  .form-section{ padding: 1.1rem .9rem; }
+  .cp-inner    { padding: 1rem .9rem .8rem; }
+  .cp-uni-name { font-size: .72rem; }
+  .cp-doc-title{ font-size: .8rem; }
 }
