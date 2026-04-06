@@ -121,14 +121,22 @@
     </section>
 
     <footer class="footer">
-      <div class="footer-inner">
+    <div class="footer-inner">
         <div class="footer-logo">
-          <img src="https://i.postimg.cc/6q1vchQ5/kover-logo.png" alt="Kover" class="footer-logo-img" />
-          <span>Kover</span>
+            <img src="https://i.postimg.cc/6q1vchQ5/kover-logo.png" alt="Kover" class="footer-logo-img" />
+            <span>Kover</span>
         </div>
-        <p class="footer-copy">Made with care by <a href="https://github.com/Swarup113" target="_blank" rel="noopener" class="footer-author">Swarup Dewanjee</a></p>
-      </div>
-    </footer>
+
+        <p class="footer-copy">
+            <b>©</b> <span id="year"></span> 
+            <a href="https://github.com/Swarup113" class="footer-link" target="_blank" rel="noopener noreferrer">Swarup Dewanjee</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
   </div>
 
 

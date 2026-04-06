@@ -196,14 +196,65 @@ textarea { resize:vertical; }
 .feature-tag   { display:inline-block;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:50px;font-size:.73rem;font-weight:600;color:var(--text-muted);letter-spacing:.04em; }
 
 /* ── FOOTER ── */
-.footer { padding:1.8rem clamp(1.5rem,6vw,5rem); border-top:1px solid var(--border); }
-.footer-inner { max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem; }
-.footer-logo { display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:700;font-size:1rem; }
-.footer-logo-img { width:34px;height:34px;object-fit:contain;border-radius:8px; }
-.footer-copy { font-size:.86rem;color:var(--text-muted); }
-.footer-author { color:var(--accent);font-weight:600;transition:color var(--transition); }
-.footer-author:hover { color:var(--accent-hover);text-decoration:underline;text-underline-offset:3px; }
-.form-footer { margin-top:3rem; }
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #161b22;
+    border-top: 1px solid #30363d;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* 3 Columns: Left, Middle (auto-width), Right */
+    align-items: center;
+    max-width: 1200px; /* Optional: keeps content from spreading too far on huge screens */
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-self: start; /* Forces logo to the far left */
+    font-size: .92rem;
+    color: white;
+}
+
+.footer-logo-img {
+    width: 28px;
+    height: 28px;
+}
+
+.footer-copy {
+    grid-column: 2; /* Forces text into the middle column */
+    text-align: center;
+    font-size: .8rem;
+    color: #8b949e;
+    margin: 0;
+    white-space: nowrap; /* Prevents text from breaking into two lines */
+}
+
+.footer-link, 
+.footer-link:visited {
+    color: #00d4aa !important; /* Your Teal Color */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Hidden spacer to balance the grid */
+.footer-spacer {
+    justify-self: end;
+}
 
 /* ── FORM PAGE ── */
 .form-nav { background:rgba(9,9,13,.95); }
